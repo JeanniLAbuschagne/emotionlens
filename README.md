@@ -1,4 +1,4 @@
-# EmotionLens — Facial Emotion Detection
+# EmotionLens : Facial Emotion Detection
 
 Detects the emotional state of a person from a photo of their face and reports
 both a **categorical emotion** (7 classes) and a **valence level**
