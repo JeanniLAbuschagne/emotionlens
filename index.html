@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EmotionLens — Facial Emotion Detection</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>EmotionLens</h1>
+      <p class="sub">Upload a face photo to detect its emotional state.</p>
+    </header>
+
+    <section class="card">
+      <label class="drop" id="drop">
+        <input type="file" id="file" accept="image/*" hidden />
+        <span id="dropText">Click or drop an image here</span>
+      </label>
+
+      <div class="preview-row">
+        <div class="preview-box">
+          <canvas id="canvas"></canvas>
+        </div>
+
+        <div class="result" id="result" hidden>
+          <div class="emotion-big" id="emotionBig">—</div>
+          <div class="valence" id="valence"></div>
+          <div class="confidence" id="confidence"></div>
+          <div class="bars" id="bars"></div>
+          <div class="warn" id="warn" hidden>
+            Low confidence — result may be unreliable.
+          </div>
+        </div>
+      </div>
+
+      <p class="status" id="status"></p>
+    </section>
+
+    <footer>
+      <small>POST your image to <code>/predict</code>. Built with FastAPI,
+      OpenCV and a TensorFlow CNN trained on FER2013.</small>
+    </footer>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

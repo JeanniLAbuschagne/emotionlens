@@ -1,0 +1,33 @@
+# EmotionLens - Python dependencies
+# Tested with Python 3.10 / 3.11
+
+# Deep learning (model building + training + inference)
+# Pinned to 2.15.x on purpose: TensorFlow 2.16+ ships Keras 3, which REMOVED
+# tf.keras.preprocessing.image.ImageDataGenerator used in training/train.py.
+# If you must use TF 2.16+, replace ImageDataGenerator with keras augmentation
+# layers (layers.RandomRotation/RandomZoom/RandomFlip) or a tf.data pipeline.
+tensorflow==2.15.1
+
+# Computer vision: face detection + image preprocessing
+opencv-python==4.10.0.84
+
+# Numerical + data handling
+numpy==1.26.4
+pandas==2.2.2
+
+# Metrics + train/test split for the validation component
+scikit-learn==1.5.1
+
+# Plots: training curves + confusion matrix
+matplotlib==3.9.1
+seaborn==0.13.2
+
+# REST API backend
+fastapi==0.111.1
+uvicorn[standard]==0.30.3
+python-multipart==0.0.9   # required by FastAPI to receive uploaded files
+pillow==10.4.0
+
+# OPTIONAL: pretrained baseline used only for cross-checking in evaluate.py
+# Install separately if you want the DeepFace comparison (it is heavy):
+#   pip install deepface==0.0.93
