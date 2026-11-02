@@ -5,8 +5,8 @@ both a **categorical emotion** (7 classes) and a **valence level**
 (positive / neutral / negative), together with a per-class confidence
 breakdown. Built for the "Emotion detection in images" task.
 
-The system classifies into the seven FER2013 emotions - **angry, disgust,
-fear, happy, sad, surprise, neutral** — which comfortably satisfies the
+The system classifies into the seven FER2013 emotions : **angry, disgust,
+fear, happy, sad, surprise, neutral** : which comfortably satisfies the
 requirement of at least three emotional states.
 
 ---
